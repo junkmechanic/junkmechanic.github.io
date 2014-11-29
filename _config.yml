@@ -1,0 +1,26 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               JunkMechanism
+tagline:             'Curve-Fitting my life'
+description:         'A blog to document and share my experiences, specially in open source software, and occasional ramblings.'
+url:                 http://junkmechanic.github.io
+baseurl:             /
+paginate:            5
+
+# About/contact
+author:
+  name:              Ankur Khanna
+  url:               http://junkmechanic.github.io
+  email:             ankurkhanna@u.nus.edu
+
+# Custom vars
+version:             1.0.0
