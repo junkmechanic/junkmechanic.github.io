@@ -10,7 +10,7 @@ relative_permalinks: true
 
 # Setup
 title:               JunkMechanism
-tagline:             'Curve-Fitting my life'
+tagline:             'Curve-Fitting my experiences'
 description:         'A blog to document and share my experiences, specially in open source software, and occasional ramblings.'
 url:                 http://junkmechanic.github.io
 baseurl:             /
