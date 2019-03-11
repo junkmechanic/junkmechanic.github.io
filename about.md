@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
 The conception of this blog is rooted in my need to have my notes well documented.

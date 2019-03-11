@@ -1,25 +1,56 @@
-# Dependencies
-markdown:            redcarpet
-highlighter:         pygments
+name: Reverie
 
-# Permalinks
+author: Ankur Khanna
+
+description: Curve-Fitting My Experiences
+
+avatar: /junkmechanic.github.io/images/mechanic.svg
+
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+# Flags below are optional
+#
 
-# Setup
-title:               JunkMechanism
-tagline:             'Curve-Fitting my experiences'
-description:         'A blog to document and share my experiences, specially in open source software, and occasional ramblings.'
-url:                 http://junkmechanic.github.io
-baseurl:             /
-paginate:            5
+# Includes an icon in the footer for each username you enter
+footer-links:
+  email: khanna89ankur@gmail.com
+  github: junkmechanic
+  linkedin:
 
-# About/contact
-author:
-  name:              Ankur Khanna
-  url:               http://junkmechanic.github.io
-  email:             ankurkhanna@u.nus.edu
 
-# Custom vars
-version:             1.0.0
+# Used for Sitemap.xml and your RSS feed
+url: https://junkmechanic.github.io
+enforce_ssl: https://junkmechanic.github.io
+
+permalink: /:title/
+
+# The release of Jekyll Now that you're using
+version: v1.2.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
