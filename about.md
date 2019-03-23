@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-On day.. there'll be something here.
+One day.. there'll be something here.
 
 
 
