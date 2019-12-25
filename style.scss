@@ -62,15 +62,15 @@ h2 {
 }
 
 @media (min-width: 769px){
-	.post h2::before, .post h2::after {
-	    content: "";
-	    display: inline-block;
-	    vertical-align: middle;
-	    width: 46px;
-	    height: 1px;
-	    background: rgb(192, 211, 218);
-	    margin: 0px 30px;
-	}
+  .post h2::before, .post h2::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 46px;
+    height: 1px;
+    background: rgb(192, 211, 218);
+    margin: 0px 30px;
+  }
 }
 
 h3 {
@@ -101,7 +101,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
@@ -170,8 +170,8 @@ p > img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
@@ -331,35 +331,35 @@ footer {
 }
 
 body:after {
-    background: linear-gradient(to right, #ffffff   0, #2196F3   33%, #E91E63   66%, #000 100%);
-    width: 100%;
-    height: 5px;
-    top: 0;
-    position: absolute;
-    left: 0;
-    content: '';
+  background: linear-gradient(to right, #ffffff   0, #2196F3   33%, #E91E63   66%, #000 100%);
+  width: 100%;
+  height: 5px;
+  top: 0;
+  position: absolute;
+  left: 0;
+  content: '';
 }
 
 @font-face {
-    font-family: EBGaramond;
-    src: url(fonts/EBGaramond-Regular.ttf);
+  font-family: EBGaramond;
+  src: url(fonts/EBGaramond-Regular.ttf);
 }
 
 @font-face {
-    font-family: FuturaPTLight;
-    src: url(fonts/FuturaPTLight.otf);
+  font-family: FuturaPTLight;
+  src: url(fonts/FuturaPTLight.otf);
 }
 
 #bar {
-    background: url(images/galaxy.jpg);
-    height: 7px;
-    background-size: cover;
-    background-position: left 60%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1000;
+    // background: url(images/galaxy.jpg);
+  height: 7px;
+  background-size: cover;
+  background-position: left 60%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;
 }
 
 .post h1{
@@ -509,32 +509,32 @@ Modules - reusable parts of our design
 }
 
 .chip {
-    display: inline-block;
-    height: 32px;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(0,0,0,.6);
-    line-height: 32px;
-    padding: 0 12px;
-    border-radius: 16px;
-    background-color: #e4e4e4;
-    margin-bottom: 5px;
-    margin-right: 5px;
+  display: inline-block;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0,0,0,.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 
 .yellow.lighten-2 {
-    background-color: #efd3f9 !important;
+  background-color: #efd3f9 !important;
 }
 
 #gh-latest{
-    font-size: 16px;
-    text-align: center;		
+  font-size: 16px;
+  text-align: center;
 }
 
 .text-link {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px dotted #000;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dotted #000;
 }
 
 //carbon ads
