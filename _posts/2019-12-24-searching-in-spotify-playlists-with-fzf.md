@@ -2,7 +2,7 @@
 layout: post
 title: Searching my Spotify playlists with fzf
 published: false
-categories: [commandline]
+categories: [command line]
 ---
 
 Spotify, for all it's _great_ features, does not have the functionality to
