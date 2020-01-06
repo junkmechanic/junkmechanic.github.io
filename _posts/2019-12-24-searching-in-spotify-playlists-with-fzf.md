@@ -44,7 +44,7 @@ main search function seen in the demo above.
 ## Interface
 
 The interface is made up of *screens*. Here is a display of two screens:
-_'Home'_ and _'Devices'_.
+_'Home'_ and _'Devices'_ (helps you switch playback to a different device).
 
 ![](/images/screens.gif)
 
@@ -52,3 +52,12 @@ Each screen can be thought of as a separate call to fzf with the options for
 that screen passed as the list of items. Once an option is selected by the
 user, the subsequent call to fzf is made with the options on the selected
 screen.
+
+fzf requires the list of items to be separated by the new-line character (`\n`).
+So on the client side, this means that we can concatenate all the options for a
+screen (represented as strings) like so:
+
+    screen_options = ['Devices', 'Search', 'Play/Pause']
+    subprocess.run(['fzf', '\n'.join(screen_options)])
+
+This works well when the number of items to be sent to fzf are small in number.

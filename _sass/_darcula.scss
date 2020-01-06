@@ -1,23 +1,22 @@
 .highlight {
-    background-color: #1e1c3f;
+    background-color: #fafafa;
     padding: 7px 7px 7px 10px;
     overflow: scroll;
     font-size: 95%;
 }
 
 code {
-    font-family:'Bitstream Vera Sans Mono','Courier', monospace;
-    color: #d8d8d8;
+    font-family: $robotoMono, monospace;
+    color: #555000;
 }
 
 .highlighter-rouge {
     background-color: #FAFAFA;
-    color: #FF554A;
+    color: #555000;
     font-size: 16px;
 }
 
 .highlight .hll { background-color: #f1fa8c }
-.highlight  { background: #282a36; color: #f8f8f2 }
 .highlight .c { color: #6272a4 } /* Comment */
 .highlight .err { color: #f8f8f2 } /* Error */
 .highlight .g { color: #f8f8f2 } /* Generic */
