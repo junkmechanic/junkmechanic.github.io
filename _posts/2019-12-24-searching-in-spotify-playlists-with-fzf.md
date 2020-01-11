@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Searching my Spotify playlists with fzf
-published: false
+published: true
 categories: [command line]
 ---
 
@@ -60,4 +60,52 @@ screen (represented as strings) like so:
     screen_options = ['Devices', 'Search', 'Play/Pause']
     subprocess.run(['fzf', '\n'.join(screen_options)])
 
-This works well when the number of items to be sent to fzf are small in number.
+This works well when the number of items to be sent to fzf is small in number.
+But the pipe breaks down miserably when the number of items grows beyond a
+handful of items. Besides, even if one finds a way to save shell pipe, the sheer
+volume of data passed (of the order of 10K tracks) slows down the whole process
+to a halt.
+
+## FIFO to the rescue
+
+As a workaround, I decided to conceptualize the pipe as a UNIX FIFO.
+
+Before launching fzf, a _Python thread_ is spawned which starts pushing all the
+songs to a temporary FIFO. This runs in the background while the main process
+forks a shell to run fzf in (which reads from the FIFO). This way, the process
+that pipes all the items is different from the process that runs fzf.
+
+Here is the idea in a few more words.
+
+    executor = ThreadPoolExecutor(max_workers=1)
+    iterator_future = executor.submit(iterator_func, config, fifo_path)
+
+    with open(fifo_path, 'r') as sink:
+        subprocess.run(['fzf'], stdin=sink)
+
+The function `iterator_func` in this case reads the songs from all my playlists
+(which are cached before running this search) and writes them to the FIFO like
+it would to any other file descriptor.
+
+Bear in mind, this hack works only because fzf is capable of updating the list
+as more items get poured into the FIFO.
+
+# Wrapping up
+
+This serves my immediate purpose and so I am quite satisfied. Every now and then
+I have to run the command to cache the most recent versions of all my playlists,
+which I could automate via cron at the very least (but I have just not had that
+itch yet).
+
+Another superficial issue that hasn't bothered me to a large extent yet is
+around how the Spotify URIs are passed from one function to another via the UI.
+It's unobtrusive but certainly not elegant (as you can see from the demo above).
+
+Setting up the Spotify interface also borders on being cumbersome. One needs to
+sign up as a developer and register an app with Spotify.
+
+I have been meaning to include more functionality so I don't have to leave the
+terminal (something other terminal users would sympathize with) most of which is
+just interfacing with the Spotify API.
+
+It would still be nice if Spotify implements this in the app :\|
