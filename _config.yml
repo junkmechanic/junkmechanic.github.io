@@ -2,6 +2,7 @@
 title:               JunkMechanism
 tagline:             'Curve-Fitting My Experiences'
 description:         'Groove and grease'
+avatar:              /images/mechanic.svg
 url:                 https://junkmechanic.github.io
 baseurl:             ''
 paginate:            5
@@ -11,6 +12,9 @@ permalink:           pretty
 author:
   name:              Ankur Khanna
   email:             khanna89ankur@gmail.com
+
+github:
+  repo:              https://github.com/junkmechanic/junkmechanic.github.io
 
 # Gems
 plugins:

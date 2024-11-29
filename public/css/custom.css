@@ -1,0 +1,10 @@
+.site-avatar {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+
+  img {
+    border-radius: 5px;
+  }
+}
