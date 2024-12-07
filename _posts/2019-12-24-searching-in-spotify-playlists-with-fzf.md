@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Searching my Spotify playlists with fzf
+excerpt_separator: <!--more-->
 ---
 
 Spotify, for all it's _great_ features, does not have the functionality to
-search personal playlists for songs. Before I continue my rant, here is what I
+search personal playlists for songs.
+<!--more-->
+Before I continue my rant, here is what I
 had in mind when I had started throwing things in the kitchen sink.
 
 ![](/images/search_demo.gif)

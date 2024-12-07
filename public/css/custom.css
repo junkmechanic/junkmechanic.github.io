@@ -8,3 +8,29 @@
     border-radius: 5px;
   }
 }
+
+/* Custom font */
+@font-face {
+  font-family: 'FuturaPTLight';
+  src: url('../../fonts/FuturaPTLight.otf');
+}
+
+html {
+  font-family: 'FuturaPTLight';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'FuturaPTLight';
+}
+
+code {
+  font-family: 'Fira Code';
+}
+
+.sidebar {
+  font-family: 'FuturaPTLight';
+}
+
+.pagination {
+  font-family: 'FuturaPTLight';
+}
